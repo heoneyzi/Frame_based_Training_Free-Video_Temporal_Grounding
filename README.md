@@ -1,9 +1,9 @@
 # Frame_based_Training_Free-Video_Temporal_Grounding
 Frame-Level Understanding for  Lightweight and Explainable Video Temporal Grounding
 
-# 📌 프레임 수준 유사도 기반의 경량형 Video Temporal Grounding 프레임워크 (FTF-VTG)
+## 📌 프레임 수준 동영상 해석의 극대화를 통한 효율적인 Video Temporal Grounding 연구 (FTF-VTG)
 
-본 저장소는 **"Frame-Level Similarity for Lightweight and Explainable Video Temporal Grounding"** 논문의 공식 구현체입니다. 
+본 저장소는 **"Frame-Level Similarity for Lightweight and Explainable Video Temporal Grounding"** 논문의 실험 및 구현입니다. 
 
 제안한 모델은 **단 하나의 Vision-Language Model (VLM)**과 **추가 학습 없이**, **프레임-쿼리 간 유사도 곡선의 패턴만을 이용**하여 비디오 내 의미 있는 시간 구간을 탐지합니다. 
 
@@ -41,8 +41,12 @@ Frame-Level Understanding for  Lightweight and Explainable Video Temporal Ground
 - **정성 평가를 통해 모델의 판단 근거를 시각적으로 확인 가능**
 
 ---
+## 데이터셋
+사용한 데이터셋 **DiDeMo**와 **VidSTG** 는 VTG와 VMR에 적절하다고 생각해 사용했으나, 이를 이용하지 않더라도 다른 적절한 데이터셋을 사용한다고 해도 파일의 구조에 따라 코드의 약간의 변화를 통해서도 충분히 응용할 수 있는 코드이다.
 
-## 📁 데이터셋 다운로드
+---
+
+## 📁 실험 데이터셋 다운로드
 
 아래는 실험에 사용할 수 있도록 전처리된 JSON 파일입니다.
 
