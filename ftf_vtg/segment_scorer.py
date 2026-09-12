@@ -1,7 +1,7 @@
 import numpy as np
 
 def compute_segment_score(similarity_array, start, end, lambda_weight=0.5):
-    all_scores = similarity_array
+    all_scores = np.asarray(similarity_array, dtype=np.float64)
     seg_scores = all_scores[start:end+1]
 
     mask = np.ones_like(all_scores, dtype=bool)
@@ -10,7 +10,8 @@ def compute_segment_score(similarity_array, start, end, lambda_weight=0.5):
 
     a = seg_scores.mean() if len(seg_scores) > 0 else 1e-6
     b = out_scores.mean() if len(out_scores) > 0 else 1e-6
-    score1 = a / b
+    denominator = b if abs(b) > 1e-6 else (1e-6 if b >= 0 else -1e-6)
+    score1 = a / denominator
 
     c = all_scores.mean()
     d = (seg_scores >= c).sum()
